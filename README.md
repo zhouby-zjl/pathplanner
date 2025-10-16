@@ -36,19 +36,17 @@ PathPlanner is built on the Host-Based Path Selector (HPS), available at [https:
    cp LinearityNetwork.cc \
        SimAI/astra-sim-alibabacloud/extern/network_backend/ns3-interface/simulation/scratch/
    # Then recompile SimAI NS-3
-````
+   ```
 
 3. Ensure Python interpreter is set up for executing the provided scripts.
 
 4. Generate a customized SimAI topology:
-
    ```bash
    ./dcn-sim.py -t simai_topo -k 16 -z 32 -n 100 -o valid \
        -l /home/zby/ext/SimAI/ -y /home/zby/ext/SimAI/
    ```
 
 5. Run SimAI to start the data plane for the DCN:
-
    ```bash
    build/scratch/ns3.36.1-LinearityNetwork-debug \
        -t 10 \
@@ -58,21 +56,19 @@ PathPlanner is built on the Host-Based Path Selector (HPS), available at [https:
        -l ./ -s
    ```
 
-   * For a full list of options:
-
-     ```bash
-     build/scratch/ns3.36.1-LinearityNetwork-debug -h
-     ```
+   For a full list of options:
+   ```bash
+   build/scratch/ns3.36.1-LinearityNetwork-debug -h
+   ```
 
 6. Run PathPlanner with HPS and SimAI:
-
    ```bash
    ./dcn-sim.py -t simai_run -k 16 -z 32 -n 100 -o valid \
        -l /home/zby/ext/SimAI/ -y /home/zby/ext/SimAI/
    ```
 
-   * SimAI and PathPlanner communicate via RESTful APIs.
-   * Results are output to a designated directory.
+   - SimAI and PathPlanner communicate via RESTful APIs.  
+   - Results are output to a designated directory.
 
 ---
 
@@ -84,7 +80,7 @@ PathPlanner is built on the Host-Based Path Selector (HPS), available at [https:
 
 ## License
 
-This work is licensed under CC BY-NC-SA 4.0
+This work is licensed under CC BY-NC-SA 4.0  
 [https://creativecommons.org/licenses/by-nc-sa/4.0/](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
 Copyright (c) 2025 Boyang Zhou
@@ -92,4 +88,3 @@ Copyright (c) 2025 Boyang Zhou
 This file is part of ["PathPlanner"](https://github.com/zhouby-zjl/pathplanner/).
 
 ---
-
